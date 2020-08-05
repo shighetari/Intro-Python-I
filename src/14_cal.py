@@ -37,15 +37,12 @@ current_year = datetime.now().year
 
 # if no input print the calendar for the current month
 if len(sys.argv) == 1:
-    # print(calendar.month(current_year, current_month))
     calendar.prmonth(current_year, current_month)
 # if passing one arg, assume month is being passed and render the calendar for the passed month of the current year
 elif len(sys.argv) == 2:
-   # print(calendar.month(args[2], current_year))
     calendar.prmonth(current_year, int(sys.argv[1]))
 # if passing two args, render the calendar for the year and the month
 elif len(sys.argv) == 3:
-    # print(calendar.month(args[2], args[3]))
     calendar.prmonth(int(sys.argv[2]), int(sys.argv[1]))
 else:
     print('Usage: 14_cal.py [month] [year]')
